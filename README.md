@@ -24,7 +24,7 @@ While you can use the pretrained model in /data, you can train your own model on
 To this end, you should create a csv training file that holds in each line a tab separated trigram and the label indicating if it is a sentence boundary.
 You can follow the sample trigrams file in /data.
 The script I used to create the training file from a PennTreeBank formatted data is in /src : CreateTrainTest.py
-In /data you can also find a sample of the initial tagged text data from the PennTreeBank : see raw_data_sample.json
+In /data you can also find a sample of the initial tagged text data from the PennTreeBank : see raw_data_sample.json but you can find the sample I used here : https://github.com/nlp-compromise/penn-treebank/blob/master/penn-data.json
 
 Now, to train the SVM model you just need to run:
 
@@ -37,4 +37,16 @@ The trained model is persisted in the /data folder
 # Run the sentence tokenizer
 
 python3 SentenceTokenizer.py --text "the text you want to segment into sentence"
+
+The output is printed one sentence per line and you can also import the SentenceTokenizer script as a module and get the sentences into a list:
+
+from SentenceTokenizer import sentence_tokenizer
+sentences = sentence_tokenizer(text)
+
+# References
+This work is highly inspired by (Agarwal et al.,2005) and (Gillick,2009) works.
+
+AGARWAL, Neha, FORD, Kelley Herndon, et SHNEIDER, Max. Sentence boundary detection using a maxEnt classifier. In : Proceedings of MISC. 2005. p. 1-6.
+
+GILLICK, Dan. Sentence boundary detection and the problem with the US. In : Proceedings of Human Language Technologies: The 2009 Annual Conference of the North American Chapter of the Association for Computational Linguistics, Companion Volume: Short Papers. 2009. p. 241-244.
 
