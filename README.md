@@ -43,6 +43,10 @@ The output is printed one sentence per line and you can also import the Sentence
 from SentenceTokenizer import sentence_tokenizer
 sentences = sentence_tokenizer(text)
 
+# TO DO
+
+Train the model using additional separators such as '!' and '?'
+
 # References
 This work is highly inspired by (Agarwal et al.,2005) and (Gillick,2009) works.
 
