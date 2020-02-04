@@ -24,6 +24,7 @@ While you can use the pretrained model in /data, you can train your own model on
 To this end, you should create a csv training file that holds in each line a tab separated trigram and the label indicating if it is a sentence boundary.
 You can follow the sample trigrams file in /data.
 The script I used to create the training file from a PennTreeBank formatted data is in /src : CreateTrainTest.py
+In /data you can also find a sample of the initial tagged text data from the PennTreeBank : see raw_data_sample.json
 
 Now, to train the SVM model you just need to run:
 
