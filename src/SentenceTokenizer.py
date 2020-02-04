@@ -1,6 +1,7 @@
 import pickle
 from TrainSBModel import trigram_featurizer
 import argparse
+import os
 
 
 def sentence_tokenizer(text, classifierpath):
@@ -50,4 +51,4 @@ if __name__ == '__main__':
     #text='At least 28 people are confirmed to have corona till today, says Mr. Guhang at the health summit. Three new cases have been diagnosed in U. K. this morning.' \
     #    'The syptoms remain unclear but a fever beyond 37.5 degrees is a bad sign. '
     if args.text:
-        sents = sentence_tokenizer(args.text,'../data/SB_Classifier')
+        sents = sentence_tokenizer(args.text, os.path.abspath('../data/SB_Classifier'))

@@ -55,7 +55,7 @@ def featurizer(data_path):
 def train_model(xtrain, ytrain):
     clf = svm.SVC()
     clf.fit(xtrain, ytrain)
-    pickle.dump(clf, open(os.environ['HOME']+'/SupervisedSB/data/SB_Classifier', 'wb'))
+    pickle.dump(clf, open(os.path.abspath('../data/SB_Classifier', 'wb')))
     return clf
 
 
@@ -68,7 +68,7 @@ def test_model(clf, xtest, ytest):
 
 
 if __name__ == '__main__':
-    data = os.environ['HOME'] + '/SupervisedSB/data/labelled_trigrams.csv'
+    data = os.path.abspath('../data/labelled_trigrams.csv')
     X, y = featurizer(data)
     X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.2)
     classifier = train_model(X_train,y_train)
