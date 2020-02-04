@@ -58,7 +58,6 @@ def get_labelled_trigrams(path, trigrams_output_file):
 
 
 if __name__ == '__main__':
-    raw_data_path = os.environ['HOME'] + '/SupervisedSB/penn-treebank-master/penn-data.json'
-    labelled_trigrams_file = os.environ['HOME'] + '/SupervisedSB/data/labelled_trigrams.csv'
+    raw_data_path = os.path.abspath('../data/raw_data_sample.json')
+    labelled_trigrams_file = os.path.abspath('../data/labelled_trigrams.csv')
     get_labelled_trigrams(raw_data_path, labelled_trigrams_file)
-    #split_train_test(os.environ['HOME'] + '/SupervisedSB/data/labelled_trigrams.csv', 0.8, os.environ['HOME'] + '/SupervisedSB/data/')
