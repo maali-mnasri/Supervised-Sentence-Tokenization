@@ -1,7 +1,7 @@
 # Supervised-Sentence-Tokenization
 A supervised tool to detect sentence boundaries.
 
-This sentence tokenizer is trained on labelled data consistong of raw text where we know where sentence boundaries are.
+This sentence tokenizer is trained on labelled data consisting of raw text where we know where sentence boundaries are.
 For research and test purpose, the model has been trained on a sample of the PennTreebank.
 
 # Feature engineering and Training setting
