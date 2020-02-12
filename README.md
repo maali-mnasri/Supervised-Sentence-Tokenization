@@ -6,9 +6,9 @@ For research and test purpose, the model has been trained on a sample of the Pen
 
 # Feature engineering and Training setting
 
-The training data consists of trigrams formed of two words separated by a separator (e.g. point). Each trigram has a additional binary label:
-  - 0 means the point in this trigram is not a sentence boundary
-  - 1 means the point in this trigram is a sentence boundary
+The training data consists of trigrams formed of two words separated by a separator (e.g. period). Each trigram has a additional binary label:
+  - 0 means the period in this trigram is not a sentence boundary
+  - 1 means the period in this trigram is a sentence boundary
   
 The training model uses multiple features such as the lengths of the previous/next words, if next/previous is in capital letters, etc.
   
